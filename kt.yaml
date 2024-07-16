@@ -1,0 +1,16 @@
+---
+name: "aok"
+language: "kt"
+ide: "idea"
+files:
+  project: "/Users/adamjonas/Projects/aok/"
+  main: "src/main/kotlin/com/github/aj8gh/aok/"
+  test: "src/test/kotlin/com/github/aj8gh/aok/"
+  resources: "src/main/resources/"
+  modulePrefix: "y-"
+  yearPrefix: "y"
+  dayPrefix: "d"
+current:
+  year: 15
+  day: 2
+  level: 2
