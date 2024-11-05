@@ -1,0 +1,21 @@
+---
+name: "aoc-go"
+language: "go"
+ide: "code"
+files:
+  projectHome: "/Users/adamjonas/Projects/aoc-go/"
+  mainDir: ""
+  testDir: ""
+  mainFilePrefix: "day"
+  testFilePrefix: "day"
+  testFileSuffix: "_test"
+  resourcesDir: null
+  resourcesSubDir: "resources/"
+  yearPrefix: "year-"
+  dayPrefix: "day-"
+  modulePrefix: null
+current:
+  year: 23
+  day: 1
+  level: 1
+writeAnswerInCode: false

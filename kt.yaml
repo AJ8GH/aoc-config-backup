@@ -1,16 +1,21 @@
 ---
 name: "aok"
 language: "kt"
-ide: "idea"
+ide: "idea1"
+writeAnswerInCode: false
 files:
-  project: "/Users/adamjonas/Projects/aok/"
-  main: "src/main/kotlin/io/github/aj8gh/aok/"
-  test: "src/test/kotlin/io/github/aj8gh/aok/"
-  resources: "src/main/resources/"
+  projectHome: "/Users/adamjonas/Projects/aok/"
+  mainDir: "src/main/kotlin/io/github/aj8gh/aok/"
+  testDir: "src/test/kotlin/io/github/aj8gh/aok/"
+  mainFilePrefix: "Day"
+  testFilePrefix: "Day"
+  testFileSuffix: "Test"
+  resourcesDir: "src/main/resources/"
+  resourcesSubDir: ""
   modulePrefix: "y-"
   yearPrefix: "y"
   dayPrefix: "d"
 current:
-  year: 16
-  day: 1
-  level: 1
+  year: 15
+  day: 2
+  level: 2
