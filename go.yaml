@@ -1,5 +1,5 @@
 ---
-name: "aoc-go"
+name: "go"
 language: "go"
 ide: "code"
 files:
@@ -16,6 +16,6 @@ files:
   modulePrefix: null
 current:
   year: 23
-  day: 1
+  day: 2
   level: 1
 writeAnswerInCode: false
