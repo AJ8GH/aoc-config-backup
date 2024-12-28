@@ -2,7 +2,6 @@
 name: "kt"
 language: "kt"
 ide: "idea1"
-writeAnswerInCode: false
 files:
   projectHome: "/Users/adamjonas/Projects/aok/"
   mainDir: "src/main/kotlin/io/github/aj8gh/aok/"
@@ -12,10 +11,11 @@ files:
   testFileSuffix: "Test"
   resourcesDir: "src/main/resources/"
   resourcesSubDir: ""
-  modulePrefix: "y-"
   yearPrefix: "y"
   dayPrefix: "d"
+  modulePrefix: "y-"
 current:
-  year: 15
-  day: 2
-  level: 2
+  year: 24
+  day: 4
+  level: 1
+writeAnswerInCode: false

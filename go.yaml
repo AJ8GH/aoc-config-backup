@@ -15,7 +15,7 @@ files:
   dayPrefix: "day-"
   modulePrefix: null
 current:
-  year: 23
-  day: 2
+  year: 24
+  day: 11
   level: 1
 writeAnswerInCode: false

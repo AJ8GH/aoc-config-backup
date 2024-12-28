@@ -137,3 +137,35 @@ cache:
       5:
         level1: "226172555"
         level2: null
+  24:
+    days:
+      1:
+        level1: "2344935"
+        level2: "27647262"
+      2:
+        level1: "236"
+        level2: "308"
+      3:
+        level1: "170807108"
+        level2: "74838033"
+      4:
+        level1: "2685"
+        level2: "2048"
+      5:
+        level1: "4790"
+        level2: "6319"
+      6:
+        level1: "5331"
+        level2: null
+      7:
+        level1: "1545311493300"
+        level2: "169122112716571"
+      8:
+        level1: "285"
+        level2: "944"
+      9:
+        level1: "6337921897505"
+        level2: "6362722604045"
+      10:
+        level1: "552"
+        level2: "1225"
