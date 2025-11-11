@@ -1,7 +1,7 @@
 ---
 name: "kt"
 language: "kt"
-ide: "idea1"
+ide: "idea"
 files:
   projectHome: "/Users/adamjonas/Projects/aok/"
   mainDir: "src/main/kotlin/io/github/aj8gh/aok/"
@@ -16,6 +16,6 @@ files:
   modulePrefix: "y-"
 current:
   year: 24
-  day: 7
+  day: 9
   level: 1
 writeAnswerInCode: false
