@@ -16,6 +16,6 @@ files:
   modulePrefix: "y-"
 current:
   year: 24
-  day: 9
+  day: 17
   level: 1
 writeAnswerInCode: false
