@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <title>Day 19 - Advent of Code 2024</title>
-<link rel="stylesheet" type="text/css" href="/static/style.css?31"/>
-<link rel="stylesheet alternate" type="text/css" href="/static/highcontrast.css?1" title="High Contrast"/>
+<link rel="stylesheet" type="text/css" href="/static/style.css?32"/>
+<link rel="stylesheet alternate" type="text/css" href="/static/highcontrast.css?2" title="High Contrast"/>
 <link rel="shortcut icon" href="/favicon.png"/>
 <script>window.addEventListener('click', function(e,s,r){if(e.target.nodeName==='CODE'&&e.detail===3){s=window.getSelection();s.removeAllRanges();r=document.createRange();r.selectNodeContents(e.target);s.addRange(r);}});</script>
 </head><!--
@@ -27,12 +27,12 @@ built the whole thing myself, including the design, animations, prose, and all
 of the puzzles.
 
 The puzzles are most of the work; preparing a new calendar and a new set of
-puzzles each year takes all of my free time for 4-5 months. A lot of effort
-went into building this thing - I hope you're enjoying playing it as much as I
+puzzles takes all of my free time for months every year. A lot of effort went
+into building this thing - I hope you're enjoying playing it as much as I
 enjoyed making it for you!
 
-If you'd like to hang out, I'm @was.tl on Bluesky, @ericwastl@hachyderm.io on
-Mastodon, and @ericwastl on Twitter.
+If you'd like to hang out, I'm @was.tl on Bluesky and @ericwastl@hachyderm.io
+on Mastodon.
 
 - Eric Wastl
 
@@ -87,10 +87,10 @@ Mastodon, and @ericwastl on Twitter.
 
 -->
 <body>
-<header><div><h1 class="title-global"><a href="/">Advent of Code</a></h1><nav><ul><li><a href="/2024/about">[About]</a></li><li><a href="/2024/events">[Events]</a></li><li><a href="https://cottonbureau.com/people/advent-of-code" target="_blank">[Shop]</a></li><li><a href="/2024/settings">[Settings]</a></li><li><a href="/2024/auth/logout">[Log Out]</a></li></ul></nav><div class="user">Adam Jonas <span class="star-count">27*</span></div></div><div><h1 class="title-event">&nbsp;&nbsp;&nbsp;<span class="title-event-wrap">var y=</span><a href="/2024">2024</a><span class="title-event-wrap">;</span></h1><nav><ul><li><a href="/2024">[Calendar]</a></li><li><a href="/2024/support">[AoC++]</a></li><li><a href="/2024/sponsors">[Sponsors]</a></li><li><a href="/2024/leaderboard">[Leaderboard]</a></li><li><a href="/2024/stats">[Stats]</a></li></ul></nav></div></header>
+<header><div><h1 class="title-global"><a href="/">Advent of Code</a></h1><nav><ul><li><a href="/2024/about">[About]</a></li><li><a href="/2024/events">[Events]</a></li><li><a href="https://cottonbureau.com/people/advent-of-code" target="_blank">[Shop]</a></li><li><a href="/2024/settings">[Settings]</a></li><li><a href="/2024/auth/logout">[Log Out]</a></li></ul></nav><div class="user">Adam Jonas <span class="star-count">40*</span></div></div><div><h1 class="title-event">&nbsp;&nbsp;&nbsp;<span class="title-event-wrap">sub y{</span><a href="/2024">2024</a><span class="title-event-wrap">}</span></h1><nav><ul><li><a href="/2024">[Calendar]</a></li><li><a href="/2024/support">[AoC++]</a></li><li><a href="/2024/sponsors">[Sponsors]</a></li><li><a href="/2024/leaderboard">[Leaderboards]</a></li><li><a href="/2024/stats">[Stats]</a></li></ul></nav></div></header>
 
 <div id="sidebar">
-<div id="sponsor"><div class="quiet">Our <a href="/2024/sponsors">sponsors</a> help make Advent of Code possible:</div><div class="sponsor"><a href="/2024/sponsors/redirect?url=https%3A%2F%2Fwww%2Ehapag%2Dlloyd%2Ecom%2Fen%2Flandingpage%2Fquasar%2Ehtml" target="_blank" onclick="if(ga)ga('send','event','sponsor','sidebar',this.href);" rel="noopener">Hapag-Lloyd</a> - Code on! At Hapag-Lloyd, we’re more than containers, we’re shipping IT innovation. Good luck to all and may the best code sail you!</div></div>
+<div id="sponsor"><div class="quiet">Our <a href="/2024/sponsors">sponsors</a> help make Advent of Code possible:</div><div class="sponsor"><a href="/2024/sponsors/redirect?url=https%3A%2F%2Fyoast%2Ecom%2F" target="_blank" onclick="if(ga)ga('send','event','sponsor','sidebar',this.href);" rel="noopener">Yoast</a> - Dreaming of your code on 14M sites worldwide? Make it come true!</div></div>
 </div><!--/sidebar-->
 
 <main>
@@ -127,12 +127,39 @@ bbrgwb
 <p>In this example, <code><em>6</em></code> of the eight designs are possible with the available towel patterns.</p>
 <p>To get into the onsen as soon as possible, consult your list of towel patterns and desired designs carefully. <em>How many designs are possible?</em></p>
 </article>
-<p>To begin, <a href="19/input" target="_blank">get your puzzle input</a>.</p>
-<form method="post" action="19/answer"><input type="hidden" name="level" value="1"/><p>Answer: <input type="text" name="answer" autocomplete="off"/> <input type="submit" value="[Submit]"/></p></form>
+<p>Your puzzle answer was <code>247</code>.</p><article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>The staff don't really like some of the towel arrangements you came up with. To avoid an endless cycle of towel rearrangement, maybe you should just give them every possible option.</p>
+<p>Here are all of the different ways the above example's designs can be made:</p>
+<p><code>brwrr</code> can be made in two different ways: <code>b</code>, <code>r</code>, <code>wr</code>, <code>r</code> <em>or</em> <code>br</code>, <code>wr</code>, <code>r</code>.</p>
+<p><code>bggr</code> can only be made with <code>b</code>, <code>g</code>, <code>g</code>, and <code>r</code>.</p>
+<p><code>gbbr</code> can be made 4 different ways:</p>
+<ul>
+<li><code>g</code>, <code>b</code>, <code>b</code>, <code>r</code></li>
+<li><code>g</code>, <code>b</code>, <code>br</code></li>
+<li><code>gb</code>, <code>b</code>, <code>r</code></li>
+<li><code>gb</code>, <code>br</code></li>
+</ul>
+<p><code>rrbgbr</code> can be made 6 different ways:</p>
+<ul>
+<li><code>r</code>, <code>r</code>, <code>b</code>, <code>g</code>, <code>b</code>, <code>r</code></li>
+<li><code>r</code>, <code>r</code>, <code>b</code>, <code>g</code>, <code>br</code></li>
+<li><code>r</code>, <code>r</code>, <code>b</code>, <code>gb</code>, <code>r</code></li>
+<li><code>r</code>, <code>rb</code>, <code>g</code>, <code>b</code>, <code>r</code></li>
+<li><code>r</code>, <code>rb</code>, <code>g</code>, <code>br</code></li>
+<li><code>r</code>, <code>rb</code>, <code>gb</code>, <code>r</code></li>
+</ul>
+<p><code>bwurrg</code> can only be made with <code>bwu</code>, <code>r</code>, <code>r</code>, and <code>g</code>.</p>
+<p><code>brgr</code> can be made in two different ways: <code>b</code>, <code>r</code>, <code>g</code>, <code>r</code> <em>or</em> <code>br</code>, <code>g</code>, <code>r</code>.</p>
+<p><code>ubwu</code> and <code>bbrgwb</code> are still impossible.</p>
+<p>Adding up all of the ways the towels in this example could be arranged into the desired designs yields <code><em>16</em></code> (<code>2 + 1 + 4 + 6 + 1 + 2</code>).</p>
+<p>They'll let you into the onsen as soon as you have the list. <em>What do you get if you add up the number of different ways you could make each design?</em></p>
+</article>
+<p>Your puzzle answer was <code>692596560138745</code>.</p><p class="day-success">Both parts of this puzzle are complete! They provide two gold stars: **</p>
+<p>At this point, you should <a href="/2024">return to your Advent calendar</a> and try another puzzle.</p>
+<p>If you still want to see it, you can <a href="19/input" target="_blank">get your puzzle input</a>.</p>
 <p>You can also <span class="share">[Share<span class="share-content">on
-  <a href="https://bsky.app/intent/compose?text=%22Linen+Layout%22+%2D+Day+19+%2D+Advent+of+Code+2024+%23AdventOfCode+https%3A%2F%2Fadventofcode%2Ecom%2F2024%2Fday%2F19" target="_blank">Bluesky</a>
-  <a href="https://twitter.com/intent/tweet?text=%22Linen+Layout%22+%2D+Day+19+%2D+Advent+of+Code+2024&amp;url=https%3A%2F%2Fadventofcode%2Ecom%2F2024%2Fday%2F19&amp;related=ericwastl&amp;hashtags=AdventOfCode" target="_blank">Twitter</a>
-  <a href="javascript:void(0);" onclick="var ms; try{ms=localStorage.getItem('mastodon.server')}finally{} if(typeof ms!=='string')ms=''; ms=prompt('Mastodon Server?',ms); if(typeof ms==='string' && ms.length){this.href='https://'+ms+'/share?text=%22Linen+Layout%22+%2D+Day+19+%2D+Advent+of+Code+2024+%23AdventOfCode+https%3A%2F%2Fadventofcode%2Ecom%2F2024%2Fday%2F19';try{localStorage.setItem('mastodon.server',ms);}finally{}}else{return false;}" target="_blank">Mastodon</a
+  <a href="https://bsky.app/intent/compose?text=I%27ve+completed+%22Linen+Layout%22+%2D+Day+19+%2D+Advent+of+Code+2024+%23AdventOfCode+https%3A%2F%2Fadventofcode%2Ecom%2F2024%2Fday%2F19" target="_blank">Bluesky</a>
+  <a href="https://twitter.com/intent/tweet?text=I%27ve+completed+%22Linen+Layout%22+%2D+Day+19+%2D+Advent+of+Code+2024&amp;url=https%3A%2F%2Fadventofcode%2Ecom%2F2024%2Fday%2F19&amp;related=ericwastl&amp;hashtags=AdventOfCode" target="_blank">Twitter</a>
+  <a href="javascript:void(0);" onclick="var ms; try{ms=localStorage.getItem('mastodon.server')}finally{} if(typeof ms!=='string')ms=''; ms=prompt('Mastodon Server?',ms); if(typeof ms==='string' && ms.length){this.href='https://'+ms+'/share?text=I%27ve+completed+%22Linen+Layout%22+%2D+Day+19+%2D+Advent+of+Code+2024+%23AdventOfCode+https%3A%2F%2Fadventofcode%2Ecom%2F2024%2Fday%2F19';try{localStorage.setItem('mastodon.server',ms);}finally{}}else{return false;}" target="_blank">Mastodon</a
 ></span>]</span> this puzzle.</p>
 </main>
 
